@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script type = "text/javascript" src="js/jquery-3.6.1.js"></script>
+        <title>Y86 stimulator</title>
+        <style type = "text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+            #container{
+                width: 1000px;
+                border: 1px solid black;
+                margin: 0 auto;
+                position: relative;
+            }
+            #navigator{
+                background-color: deepskyblue;
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+            }
+            #menuText{
+                border: 1px solid black;
+                width: 150px;
+                height: 100%;
+                text-align: center;
+                border-radius: 10px 10px 0px 0px;
+                margin-left: 10px;
+                background-color: royalblue;
+                color: white;
+                font-size: 30px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .section{
+                left: 0;
+                width: 200px;
+                height: 400px;
+                line-height: 130px;
+                text-align: center;
+                border: 1px solid black;
+                background-color: skyblue;
+                margin-top: 0px;
+                margin-bottom: 5px;
+                position: absolute;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 20px;
+                overflow: hidden;
+            }
+            #bgImg{
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                z-index: -1;
+                width: 50%;
+            }
+            #bgImg img{
+                width: 100%;
+            }
+            #article_carouse{
+                width: 80%;
+                height: 310px;
+                /* background-color: cornflowerblue; */
+                position: absolute;
+                left: 200px;
+                margin-bottom: 5px;
+            }
+            #content_carouse{
+                width: 100%;
+                height: 400px;
+                background-color: darkgray;
+                position: relative;
+                /* background-color: skyblue; */
+                top: 0px;
+                left: 0px;
+            }
+            #content_carouse div img{
+                width: 800px;
+                height: 400px;
+                overflow: hidden;
+                object-fit: fill;
+            }
+            #flag{
+                position: relative;
+                right: 0px;
+                bottom: 5px;
+                float: right;
+            }
+            #flag div{
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                border: 1px solid black;
+                text-align: center;
+                background-color: gainsboro;
+            }
+            #flag div:active{
+                background-color: darkgray;
+                transform: translate(1px,1px);
+                -webkit-transform: translate(1px,1px);
+                -moz-transform: translate(1px,1px);
+                -ms-transform: translate(1px,1px);
+                box-shadow: 2px 2px 2px gray;
+            }
+            .title
+            {
+                display: flex;
+                justify-content: center;
+                line-height: 30px;
+                color: white;
+                font-size: 90px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .words{
+                position:absolute;
+                display: inline-block;
+                left: 50%;
+                background-color: aliceblue;
+                margin-left: -40%;
+                width: 80%;
+                height: 50px;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 50px;
+            }
+            .in_file{
+                position:absolute;
+                display: inline-block;
+                left: 50%;
+                margin-left: -40%;
+                width: 80%;
+                height: 30px;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 30px;
+            }
+            .opt{
+                position:absolute;
+                display: inline-block;
+                left: 50%;
+                margin-left: -22%;
+                width: 70%;
+                height: 40px;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 40px;
+            }
+            .cpu_words{
+                position:absolute;
+                left: 50%;
+                margin-left: -40%;
+                width: 80%;
+                height: 30px;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 30px;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = function(){
+                for(var i = 0; i < 6;i++){
+                    var newDiv = document.createElement("div");
+                    document.getElementById("content_carouse").appendChild(newDiv);
+                    newDiv.id = "content_carouse" + i;
+                    var newImg = document.createElement("img");
+                    document.getElementById( "content_carouse" + i).appendChild(newImg);
+                    newImg.src = "img/flag00" + i + ".jpg";
+                    if(i == 5){ 
+                        document.getElementById("content_carouse" + i).hidden = false;
+                    }
+                    else{
+                        document.getElementById("content_carouse" + i).hidden = true;
+                    }
+                }
+            }
+
+        </script>
+    </head>
+    <body background="img/bkimg.png">
+        <br>
+        <br>
+        <div class="title">Y86 stimulator</div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="container">
+            <div id="navigator">
+                <div id="menuText">
+                    menu
+                </div>
+            </div>
+            <div class="section">
+                <a href="About.html">About-Introduction</a>
+                <br>
+                <a href="Graph.html">Reference-Graph</a>
+                <br>
+                <a href="code.html">Backhend-code</a>
+                <br>
+            </div>
+            <div id="article_carouse">
+                <div id="content_carouse">
+                </div>
+                <div id="flag">
+                    <br>
+                    <div onclick="change(5,0,1,2,3,4);">0</div>
+                    <div onclick="change(0,1,2,3,4,5);">1</div>
+                    <div onclick="change(1,0,2,3,4,5);">2</div>
+                    <div onclick="change(2,0,1,3,4,5);">3</div>
+                    <div onclick="change(3,0,1,2,4,5);">4</div>
+                    <div onclick="change(4,0,1,2,3,5);">5</div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                function change(a,b,c,d,e,f){
+                    document.getElementById("content_carouse"+a).hidden = false;
+                    document.getElementById("content_carouse"+b).hidden = true;
+                    document.getElementById("content_carouse"+c).hidden = true;
+                    document.getElementById("content_carouse"+d).hidden = true;
+                    document.getElementById("content_carouse"+e).hidden = true;
+                    document.getElementById("content_carouse"+f).hidden = true;
+                }
+            </script>
+        </div>   
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="in_file">
+            First,you should upload one .json file in the prescribed format!
+            <br>
+            <input type="file" id = "file"/>
+        </div>
+        </div><br><br><br><br><br><br>
+        <div class="words">
+            Here comes the result!
+            You can push the button to move!
+        <br><br>
+        <div class="opt">
+            
+            <td>
+                <a href="###" type="radio"  onclick ="back()">back</a>
+            </td>
+            <a>---------------&&---------------</a>
+            <td>
+                <a href="###" type="radio"  onclick ="forth()">forth</a>
+            </td>
+        </div>
+        <br><br><br>
+        <div class="cpu_words">
+            <div id="cpu"></div>
+        </div>
+        <br>
+    </body>
+    <script type="text/javascript">
+        var size = 0;
+        var pos = -1;
+        var inputElement = document.getElementById("file");
+        inputElement.addEventListener("change", handleFiles, false);
+        function handleFiles() {
+           var selectedFile = document.getElementById("file").files[0];
+           var reader = new FileReader();
+            reader.readAsText(selectedFile);
+            reader.onload = function(){
+                let json = JSON.parse(this.result);
+                size = 0;
+                $.each(json,function(i,o){
+                    size = size + 1;
+                    var newCpu = document.createElement("div");
+                    var space = "&nbsp;&nbsp;&nbsp;&nbsp;";
+                    var html = "<br><br>PC:";
+                    html += space;
+                    html += o["PC"];
+                    html += "<br>";
+                    html += "REG:";
+                    html += "<br>";
+                    for(var j in o["REG"]){
+                        html += space;
+                        html += j;
+                        html +=":";
+                        html += space;
+                        html += o["REG"][j];
+                        html += "<br>";
+                    }
+                    html += "CC:";
+                    html += "<br>";
+                    for(var j in o["CC"]){
+                        html += space;
+                        html += j;
+                        html +=":";
+                        html += space;
+                        html += o["CC"][j];
+                        html += "<br>";
+                    }
+                    html += "STAT:";
+                    html += space;
+                    html += o["STAT"];
+                    html += "<br>";
+                    html += "MEM:";
+                    html += "<br>";
+                    for(var j in o["MEM"]){
+                       html += space;
+                       html += j;
+                       html +=":";
+                       html += space;
+                       html += o["MEM"][j];
+                       html += "<br>";
+                    }
+                    newCpu.innerHTML += html;
+                    newCpu.hidden = true;
+                    document.getElementById("cpu").appendChild(newCpu);
+                    newCpu.id = "cpu" + i;
+                })
+            };
+        }
+        function show(){
+            for(var m = 0;m < size;m++){
+                if(m != pos)
+                    document.getElementById("cpu" + m).hidden = true;
+                else
+                    document.getElementById("cpu" + m).hidden = false;
+            }
+        }
+        function forth(){
+            if(pos < size - 1) {
+                pos = pos + 1;
+                show();
+            }
+            else{
+                alert("You have to back!");
+            }
+        }
+        function back(){
+            if(pos >= 1){
+                pos = pos - 1;
+                show();
+            }
+            else{
+                alert("You have to forth!");
+            }
+        }
+    </script>
+</html>

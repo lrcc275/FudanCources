@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script type = "text/javascript" src = "js/jquery-3.6.1.js"></script>
+        <style type="text/css">
+            .containeradmin{
+                color: rgb(88, 200, 18);
+                font-size: 60px;
+                position: absolute;
+                left: 50%;
+                margin-left: -40%;
+                width: 80%;
+                height: 30px;
+            }
+            .pic{
+                position: relative;
+                left: 50%;
+                margin-left: -40%;
+                width: 80%;
+                font-size: 30px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="containeradmin">
+            <td>
+                <a href="#" type="radio" onclick="show(1)">input</a>
+            </td>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td>
+                <a href="#" type="radio" onclick="show(2)">six-stages</a>
+            </td>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td>
+                <a href="#" type="radio" onclick="show(3)">output</a>
+            </td>
+        </div>
+    <br><br><br>
+    <div class="pic" id="div1">
+        <br><br><img src="img/Preprocess.jpg" width = "1200px" height="600px"/><br>
+    </div>
+    <div class="pic" id="div2">
+        <br><br>The code is too long,so we would like to show critical points!
+        <br><br>1. Instruction && Data && Stack are stored in hash_map.
+        <br><br>2. Without explicit declaration, rsp will be 0x200.
+        <br><br>3. The range of stack could only be expanded.
+        <br><br>4. Instruction && Stack && Data are definitely different.
+        <br><br>5. Instruction Memory could only be read,cannot be written.
+        <br><br>6. Operations on "rsp" are taking in Memory Logic.
+        <br><br>7. About the json_output import: "Copyright (c) 2009 Dave Gamble".
+    </div>
+    <div class="pic" id="div3">
+        <br><br><img src="img/output1.jpg" width="1000px" height="750px"/>
+        <img src="img/output2.jpg" width="1000px" height="600px"/><br>
+    </div>
+    
+    <script type="text/javascript">
+        function show(j){
+            for(var i = 1;i <= 3;i++){
+                if(i != j)
+                    document.getElementById("div" + i).hidden = true;
+                else{
+                    document.getElementById("div" + i).hidden = false;
+                }
+            }
+        }
+    </script>
+    </body>
+</html>
