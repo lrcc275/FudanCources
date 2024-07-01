@@ -1,0 +1,68 @@
+| Copied codes to checkpoints/motion2video_nerf/wzx_head/codes/20240611014238.
+| cond_prenet Trainable Parameters: 0.050M
+| blink_embedding Trainable Parameters: 0.000M
+| blink_encoder Trainable Parameters: 0.001M
+| cond_att_net Trainable Parameters: 0.004M
+| position_embedder Trainable Parameters: 1.807M
+| ambient_net Trainable Parameters: 0.029M
+| ambient_embedder Trainable Parameters: 1.807M
+| sigma_net Trainable Parameters: 0.041M
+| direction_embedder Trainable Parameters: 0.000M
+| color_net Trainable Parameters: 0.019M
+| dropout Trainable Parameters: 0.000M
+| sr_net Trainable Parameters: 0.271M
+Setting up PyTorch plugin "bias_act_plugin"... Done.
+Setting up PyTorch plugin "upfirdn2d_plugin"... Done.
+| Validation results@0: {'total_loss': 1.4210622311, 'mse_loss': 0.0244677495, 'sr_mse_loss': 0.3965944648, 'lambda_ambient': 1.0}
+| Validation results@2000: {'total_loss': 88.7718729401, 'mse_loss': 0.0011093217, 'sr_mse_loss': 0.0013313874, 'lambda_ambient': 88.7694320679}
+| Validation results@4000: {'total_loss': 151.0828038025, 'mse_loss': 0.0005800002, 'sr_mse_loss': 0.0007425369, 'lambda_ambient': 151.0814819336}
+| Validation results@6000: {'total_loss': 184.3430773926, 'mse_loss': 0.0005201707, 'sr_mse_loss': 0.0006847875, 'lambda_ambient': 184.3418731689}
+| Validation results@8000: {'total_loss': 219.9908703613, 'mse_loss': 0.0004784792, 'sr_mse_loss': 0.0005693196, 'lambda_ambient': 219.9898223877}
+| Validation results@10000: {'total_loss': 237.479710083, 'mse_loss': 0.0004541712, 'sr_mse_loss': 0.0005115978, 'lambda_ambient': 237.4787445068}
+| Validation results@12000: {'total_loss': 233.8019248962, 'mse_loss': 0.0004174402, 'sr_mse_loss': 0.0004828564, 'lambda_ambient': 233.8010253906}
+| Validation results@14000: {'total_loss': 216.8492608643, 'mse_loss': 0.0005220969, 'sr_mse_loss': 0.0005637683, 'lambda_ambient': 216.8481750488}
+| Validation results@16000: {'total_loss': 190.4902293396, 'mse_loss': 0.0004186592, 'sr_mse_loss': 0.000461509, 'lambda_ambient': 190.4893493652}
+| Validation results@18000: {'total_loss': 132.4033120728, 'mse_loss': 0.0004441118, 'sr_mse_loss': 0.000477881, 'lambda_ambient': 132.4023895264}
+| Validation results@20000: {'total_loss': 28.9003936195, 'mse_loss': 0.0004751634, 'sr_mse_loss': 0.0005463075, 'lambda_ambient': 28.8993721008}
+| Validation results@22000: {'total_loss': 0.4416487989, 'mse_loss': 0.0004923078, 'sr_mse_loss': 0.0005236693, 'lambda_ambient': 0.4406328201}
+| Validation results@24000: {'total_loss': 1.2011577392, 'mse_loss': 0.0004262667, 'sr_mse_loss': 0.0004453292, 'lambda_ambient': 1.20028615}
+| Validation results@26000: {'total_loss': 1.7621255529, 'mse_loss': 0.0005003157, 'sr_mse_loss': 0.000583477, 'lambda_ambient': 1.7610417604}
+| Validation results@28000: {'total_loss': 3.2515797758, 'mse_loss': 0.0004275467, 'sr_mse_loss': 0.0004686766, 'lambda_ambient': 3.2506835461}
+| Validation results@30000: {'total_loss': 2.9979277945, 'mse_loss': 0.0004414641, 'sr_mse_loss': 0.0004494015, 'lambda_ambient': 2.9970369339}
+| Validation results@32000: {'total_loss': 5.8225827408, 'mse_loss': 0.0004399803, 'sr_mse_loss': 0.000461727, 'lambda_ambient': 5.8216810226}
+| Validation results@34000: {'total_loss': 8.3117407799, 'mse_loss': 0.0004502695, 'sr_mse_loss': 0.0004537354, 'lambda_ambient': 8.310836792}
+| Validation results@36000: {'total_loss': 6.8416846514, 'mse_loss': 0.0004484979, 'sr_mse_loss': 0.0004706709, 'lambda_ambient': 6.8407654762}
+| Validation results@38000: {'total_loss': 10.4001743793, 'mse_loss': 0.000448032, 'sr_mse_loss': 0.0004524931, 'lambda_ambient': 10.3992738724}
+| Validation results@40000: {'total_loss': 17.15736166, 'mse_loss': 0.0004592291, 'sr_mse_loss': 0.0004578481, 'lambda_ambient': 17.1564445496}
+| Validation results@42000: {'total_loss': 19.3106918335, 'mse_loss': 0.0004539279, 'sr_mse_loss': 0.0004538842, 'lambda_ambient': 19.3097839355}
+| Validation results@44000: {'total_loss': 25.5415366364, 'mse_loss': 0.0004159992, 'sr_mse_loss': 0.0004196942, 'lambda_ambient': 25.5407009125}
+| Validation results@46000: {'total_loss': 27.1190660477, 'mse_loss': 0.0004014322, 'sr_mse_loss': 0.0003995133, 'lambda_ambient': 27.118265152}
+| Validation results@48000: {'total_loss': 32.6172849655, 'mse_loss': 0.0004183053, 'sr_mse_loss': 0.0004308289, 'lambda_ambient': 32.6164360046}
+| Validation results@50000: {'total_loss': 36.9242752838, 'mse_loss': 0.0004746101, 'sr_mse_loss': 0.0004762478, 'lambda_ambient': 36.923324585}
+| Validation results@52000: {'total_loss': 42.7938752747, 'mse_loss': 0.0004752022, 'sr_mse_loss': 0.0004809405, 'lambda_ambient': 42.7929191589}
+| Validation results@54000: {'total_loss': 45.7604138947, 'mse_loss': 0.0004149384, 'sr_mse_loss': 0.0004315127, 'lambda_ambient': 45.7595672607}
+| Validation results@56000: {'total_loss': 52.5163511276, 'mse_loss': 0.0004127804, 'sr_mse_loss': 0.0004123746, 'lambda_ambient': 52.5155258179}
+| Validation results@58000: {'total_loss': 59.591864624, 'mse_loss': 0.0004439933, 'sr_mse_loss': 0.0004437807, 'lambda_ambient': 59.5909767151}
+| Validation results@60000: {'total_loss': 66.691062088, 'mse_loss': 0.0003963948, 'sr_mse_loss': 0.0003967092, 'lambda_ambient': 66.6902694702}
+| Validation results@62000: {'total_loss': 74.6451650238, 'mse_loss': 0.0004449585, 'sr_mse_loss': 0.0004480097, 'lambda_ambient': 74.6442718506}
+| Validation results@64000: {'total_loss': 83.2002032471, 'mse_loss': 0.0004367917, 'sr_mse_loss': 0.0004331715, 'lambda_ambient': 83.1993331909}
+| Validation results@66000: {'total_loss': 90.5410314941, 'mse_loss': 0.0004189082, 'sr_mse_loss': 0.0004209982, 'lambda_ambient': 90.5401916504}
+| Validation results@68000: {'total_loss': 97.5698068237, 'mse_loss': 0.0004429523, 'sr_mse_loss': 0.0004401754, 'lambda_ambient': 97.5689239502}
+| Validation results@70000: {'total_loss': 103.7381562042, 'mse_loss': 0.0004302701, 'sr_mse_loss': 0.0004204359, 'lambda_ambient': 103.7373046875}
+| Validation results@72000: {'total_loss': 110.127946167, 'mse_loss': 0.0004588368, 'sr_mse_loss': 0.0004654833, 'lambda_ambient': 110.1270217896}
+| Validation results@74000: {'total_loss': 117.2595166779, 'mse_loss': 0.0004012387, 'sr_mse_loss': 0.0004025992, 'lambda_ambient': 117.2587127686}
+| Validation results@76000: {'total_loss': 125.2984700775, 'mse_loss': 0.0004752158, 'sr_mse_loss': 0.0004711228, 'lambda_ambient': 125.2975234985}
+| Validation results@78000: {'total_loss': 131.8637651062, 'mse_loss': 0.0004431646, 'sr_mse_loss': 0.0004371934, 'lambda_ambient': 131.8628845215}
+| Validation results@80000: {'total_loss': 140.0349972534, 'mse_loss': 0.0004582423, 'sr_mse_loss': 0.0004555808, 'lpips_loss': 0.5373174024, 'sr_lpips_loss': 0.701143257, 'sr_lip_lpips_loss': 0.9271991938, 'lambda_ambient': 137.8684234619}
+| Validation results@82000: {'total_loss': 148.6837153625, 'mse_loss': 0.0004747891, 'sr_mse_loss': 0.0004750779, 'lpips_loss': 0.4997204408, 'sr_lpips_loss': 0.589238601, 'sr_lip_lpips_loss': 0.8321644068, 'lambda_ambient': 146.7616424561}
+| Validation results@84000: {'total_loss': 158.0076144409, 'mse_loss': 0.0004328634, 'sr_mse_loss': 0.0004387753, 'lpips_loss': 0.4937688854, 'sr_lpips_loss': 0.5759244937, 'sr_lip_lpips_loss': 0.8029555857, 'lambda_ambient': 156.1340942383}
+| Validation results@86000: {'total_loss': 166.4257966614, 'mse_loss': 0.0004924498, 'sr_mse_loss': 0.0004970626, 'lpips_loss': 0.5021060628, 'sr_lpips_loss': 0.5790168414, 'sr_lip_lpips_loss': 0.8023025459, 'lambda_ambient': 164.5413818359}
+| Validation results@88000: {'total_loss': 173.6080648804, 'mse_loss': 0.0004581735, 'sr_mse_loss': 0.0004656015, 'lpips_loss': 0.4836256588, 'sr_lpips_loss': 0.558875221, 'sr_lip_lpips_loss': 0.7874641109, 'lambda_ambient': 171.7771759033}
+| Validation results@90000: {'total_loss': 182.1594952393, 'mse_loss': 0.0004632187, 'sr_mse_loss': 0.0004714794, 'lpips_loss': 0.4913683194, 'sr_lpips_loss': 0.5622076705, 'sr_lip_lpips_loss': 0.7870366049, 'lambda_ambient': 180.3179473877}
+| Validation results@92000: {'total_loss': 189.7348097229, 'mse_loss': 0.0004404636, 'sr_mse_loss': 0.0004383545, 'lpips_loss': 0.4777635965, 'sr_lpips_loss': 0.5462314162, 'sr_lip_lpips_loss': 0.7940573734, 'lambda_ambient': 187.9158782959}
+| Validation results@94000: {'total_loss': 196.8808911133, 'mse_loss': 0.0004503285, 'sr_mse_loss': 0.0004516277, 'lpips_loss': 0.4817141613, 'sr_lpips_loss': 0.5501669249, 'sr_lip_lpips_loss': 0.7895910478, 'lambda_ambient': 195.0585174561}
+| Validation results@96000: {'total_loss': 204.0616265869, 'mse_loss': 0.0004249571, 'sr_mse_loss': 0.0004243623, 'lpips_loss': 0.4718809393, 'sr_lpips_loss': 0.538881664, 'sr_lip_lpips_loss': 0.7792025894, 'lambda_ambient': 202.2708129883}
+| Validation results@98000: {'total_loss': 211.148568573, 'mse_loss': 0.0004812698, 'sr_mse_loss': 0.0004938703, 'lpips_loss': 0.4905172846, 'sr_lpips_loss': 0.5567904589, 'sr_lip_lpips_loss': 0.8073165542, 'lambda_ambient': 209.29296875}
+| Validation results@100000: {'total_loss': 217.5207542419, 'mse_loss': 0.0004185864, 'sr_mse_loss': 0.0004204369, 'lpips_loss': 0.4778635204, 'sr_lpips_loss': 0.5386588457, 'sr_lip_lpips_loss': 0.760549404, 'lambda_ambient': 215.7428436279}
+| Training end..
+Epoch 0 ended. Steps: 100001. {'total_loss': 0.0020499791924001444, 'mse_loss': 0.0006398139127365296, 'weights_entropy_loss': 0.029039886494905746, 'num_non_facemask': 56553.07463925361, 'ambient_loss': 5.6177341240720415e-05, 'sr_mse_loss': 0.0006069781847999184, 'lambda_ambient': 99.1048655476972, 'head_psnr': 33.60171744662787, 'density_grid_info_min_density': -1.0, 'density_grid_info_max_density': 54829605.67408475, 'density_grid_info_mean_density': 392.7819457897842, 'density_grid_info_occupancy_rate': 0.1258647027015686, 'density_grid_info_step_mean_count': 275483.701, 'lpips_loss': 0.590614538743528, 'sr_lpips_loss': 0.5147195119815113, 'sr_lip_lpips_loss': 0.6625106775604495}

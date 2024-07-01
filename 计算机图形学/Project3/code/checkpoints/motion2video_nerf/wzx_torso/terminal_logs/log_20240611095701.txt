@@ -1,0 +1,78 @@
+| Copied codes to checkpoints/motion2video_nerf/wzx_torso/codes/20240611095701.
+| load 'model' from 'checkpoints/motion2video_nerf/wzx_head/model_ckpt_steps_100000.ckpt', strict=True
+Loaded Head Model from checkpoints/motion2video_nerf/wzx_head
+Loaded state_dict of Head Model to the RADNeRFTorso Model
+| cond_prenet Trainable Parameters: 0.000M
+| blink_embedding Trainable Parameters: 0.000M
+| blink_encoder Trainable Parameters: 0.000M
+| cond_att_net Trainable Parameters: 0.000M
+| position_embedder Trainable Parameters: 0.000M
+| ambient_net Trainable Parameters: 0.000M
+| ambient_embedder Trainable Parameters: 0.000M
+| sigma_net Trainable Parameters: 0.000M
+| direction_embedder Trainable Parameters: 0.000M
+| color_net Trainable Parameters: 0.000M
+| dropout Trainable Parameters: 0.000M
+| lm68_embedder Trainable Parameters: 0.000M
+| torso_pose_embedder Trainable Parameters: 0.000M
+| torso_deform_pos_embedder Trainable Parameters: 0.000M
+| torso_embedder Trainable Parameters: 1.111M
+| head_color_weights_encoder Trainable Parameters: 0.000M
+| torso_deform_net Trainable Parameters: 0.017M
+| torso_canonicial_net Trainable Parameters: 0.008M
+| sr_net Trainable Parameters: 0.271M
+Setting up PyTorch plugin "bias_act_plugin"... Done.
+Setting up PyTorch plugin "upfirdn2d_plugin"... Done.
+| Validation results@0: {'total_loss': 0.1436760053, 'torso_mse_loss': 0.0720834248, 'torso_weights_entropy_loss': 0.0001805429, 'sr_torso_mse_loss': 0.0714120381}
+| Validation results@2000: {'total_loss': 0.1199428396, 'torso_mse_loss': 0.0016749119, 'torso_weights_entropy_loss': 0.0965505815, 'torso_deform_loss': 0.0199170781, 'sr_torso_mse_loss': 0.0018002681}
+| Validation results@4000: {'total_loss': 0.0976658829, 'torso_mse_loss': 0.0013754059, 'torso_weights_entropy_loss': 0.0752701367, 'torso_deform_loss': 0.0194985434, 'sr_torso_mse_loss': 0.001521797}
+| Validation results@6000: {'total_loss': 0.0982615135, 'torso_mse_loss': 0.0012977392, 'torso_weights_entropy_loss': 0.07658705, 'torso_deform_loss': 0.0189584862, 'sr_torso_mse_loss': 0.0014182379}
+| Validation results@8000: {'total_loss': 0.0716827744, 'torso_mse_loss': 0.0014275282, 'torso_weights_entropy_loss': 0.0492281067, 'torso_deform_loss': 0.0194459934, 'sr_torso_mse_loss': 0.0015811461}
+| Validation results@10000: {'total_loss': 0.0624796787, 'torso_mse_loss': 0.0011043576, 'torso_weights_entropy_loss': 0.0410498484, 'torso_deform_loss': 0.0190614296, 'sr_torso_mse_loss': 0.001264043}
+| Validation results@12000: {'total_loss': 0.0536540308, 'torso_mse_loss': 0.0006781659, 'torso_weights_entropy_loss': 0.0361991883, 'torso_deform_loss': 0.0159556606, 'sr_torso_mse_loss': 0.0008210157}
+| Validation results@14000: {'total_loss': 0.0523323762, 'torso_mse_loss': 0.0009784273, 'torso_weights_entropy_loss': 0.0329213919, 'torso_deform_loss': 0.0173308672, 'sr_torso_mse_loss': 0.0011016898}
+| Validation results@16000: {'total_loss': 0.0495800355, 'torso_mse_loss': 0.0011270592, 'torso_weights_entropy_loss': 0.0292537611, 'torso_deform_loss': 0.0179325738, 'sr_torso_mse_loss': 0.0012666415}
+| Validation results@18000: {'total_loss': 0.0441506969, 'torso_mse_loss': 0.0007163711, 'torso_weights_entropy_loss': 0.0259530537, 'torso_deform_loss': 0.0166107161, 'sr_torso_mse_loss': 0.0008705559}
+| Validation results@20000: {'total_loss': 0.0415385323, 'torso_mse_loss': 0.0007370493, 'torso_weights_entropy_loss': 0.0232691404, 'torso_deform_loss': 0.0166393354, 'sr_torso_mse_loss': 0.0008930072}
+| Validation results@22000: {'total_loss': 0.039260123, 'torso_mse_loss': 0.0006684538, 'torso_weights_entropy_loss': 0.0220910597, 'torso_deform_loss': 0.0156709128, 'sr_torso_mse_loss': 0.0008296966}
+| Validation results@24000: {'total_loss': 0.036718995, 'torso_mse_loss': 0.0004957206, 'torso_weights_entropy_loss': 0.019782574, 'torso_deform_loss': 0.0157953009, 'sr_torso_mse_loss': 0.0006453998}
+| Validation results@26000: {'total_loss': 0.0348275951, 'torso_mse_loss': 0.0006272752, 'torso_weights_entropy_loss': 0.0177945088, 'torso_deform_loss': 0.0156358344, 'sr_torso_mse_loss': 0.0007699764}
+| Validation results@28000: {'total_loss': 0.033552231, 'torso_mse_loss': 0.0005396958, 'torso_weights_entropy_loss': 0.0167313382, 'torso_deform_loss': 0.0155941346, 'sr_torso_mse_loss': 0.0006870621}
+| Validation results@30000: {'total_loss': 0.0343751042, 'torso_mse_loss': 0.0007361342, 'torso_weights_entropy_loss': 0.0163452402, 'torso_deform_loss': 0.0163994463, 'sr_torso_mse_loss': 0.0008942834}
+| Validation results@32000: {'total_loss': 0.0340145284, 'torso_mse_loss': 0.0008324081, 'torso_weights_entropy_loss': 0.0154327804, 'torso_deform_loss': 0.01674629, 'sr_torso_mse_loss': 0.00100305}
+| Validation results@34000: {'total_loss': 0.0319464981, 'torso_mse_loss': 0.0006666579, 'torso_weights_entropy_loss': 0.0150387395, 'torso_deform_loss': 0.0154247589, 'sr_torso_mse_loss': 0.0008163416}
+| Validation results@36000: {'total_loss': 0.0310160821, 'torso_mse_loss': 0.000612754, 'torso_weights_entropy_loss': 0.0140942487, 'torso_deform_loss': 0.0155289722, 'sr_torso_mse_loss': 0.0007801073}
+| Validation results@38000: {'total_loss': 0.0297941163, 'torso_mse_loss': 0.0005415788, 'torso_weights_entropy_loss': 0.0138056564, 'torso_deform_loss': 0.0147584959, 'sr_torso_mse_loss': 0.0006883851}
+| Validation results@40000: {'total_loss': 0.0296352304, 'torso_mse_loss': 0.0005809571, 'torso_weights_entropy_loss': 0.0133357904, 'torso_deform_loss': 0.0149734093, 'sr_torso_mse_loss': 0.0007450737}
+| Validation results@42000: {'total_loss': 0.0289472132, 'torso_mse_loss': 0.0004697608, 'torso_weights_entropy_loss': 0.0130850072, 'torso_deform_loss': 0.0147742236, 'sr_torso_mse_loss': 0.0006182216}
+| Validation results@44000: {'total_loss': 0.029061626, 'torso_mse_loss': 0.0005682683, 'torso_weights_entropy_loss': 0.0126604927, 'torso_deform_loss': 0.0150941219, 'sr_torso_mse_loss': 0.0007387431}
+| Validation results@46000: {'total_loss': 0.0285584311, 'torso_mse_loss': 0.0005610372, 'torso_weights_entropy_loss': 0.0126457413, 'torso_deform_loss': 0.0146288036, 'sr_torso_mse_loss': 0.0007228491}
+| Validation results@48000: {'total_loss': 0.0281075436, 'torso_mse_loss': 0.0005771386, 'torso_weights_entropy_loss': 0.0122696716, 'torso_deform_loss': 0.0145221927, 'sr_torso_mse_loss': 0.0007385409}
+| Validation results@50000: {'total_loss': 0.0273827614, 'torso_mse_loss': 0.0004746784, 'torso_weights_entropy_loss': 0.0120686397, 'torso_deform_loss': 0.0142230511, 'sr_torso_mse_loss': 0.0006163922}
+| Validation results@52000: {'total_loss': 0.0277882282, 'torso_mse_loss': 0.0005409267, 'torso_weights_entropy_loss': 0.0115278031, 'torso_deform_loss': 0.0150177434, 'sr_torso_mse_loss': 0.0007017551}
+| Validation results@54000: {'total_loss': 0.0272724794, 'torso_mse_loss': 0.0005280164, 'torso_weights_entropy_loss': 0.0116433996, 'torso_deform_loss': 0.014401346, 'sr_torso_mse_loss': 0.0006997176}
+| Validation results@56000: {'total_loss': 0.0269213752, 'torso_mse_loss': 0.0004072459, 'torso_weights_entropy_loss': 0.011596776, 'torso_deform_loss': 0.0143623105, 'sr_torso_mse_loss': 0.0005550429}
+| Validation results@58000: {'total_loss': 0.0267302047, 'torso_mse_loss': 0.0004619824, 'torso_weights_entropy_loss': 0.0113117561, 'torso_deform_loss': 0.0143417228, 'sr_torso_mse_loss': 0.0006147434}
+| Validation results@60000: {'total_loss': 0.0271059275, 'torso_mse_loss': 0.0005323338, 'torso_weights_entropy_loss': 0.0114385251, 'torso_deform_loss': 0.0144388727, 'sr_torso_mse_loss': 0.0006961959}
+| Validation results@62000: {'total_loss': 0.0269942998, 'torso_mse_loss': 0.0005036127, 'torso_weights_entropy_loss': 0.0115927105, 'torso_deform_loss': 0.0142448783, 'sr_torso_mse_loss': 0.0006530983}
+| Validation results@64000: {'total_loss': 0.0270173909, 'torso_mse_loss': 0.0004570538, 'torso_weights_entropy_loss': 0.01139542, 'torso_deform_loss': 0.0145426246, 'sr_torso_mse_loss': 0.0006222926}
+| Validation results@66000: {'total_loss': 0.0266020368, 'torso_mse_loss': 0.0005496198, 'torso_weights_entropy_loss': 0.0110759155, 'torso_deform_loss': 0.0142566564, 'sr_torso_mse_loss': 0.0007198452}
+| Validation results@68000: {'total_loss': 0.0266936985, 'torso_mse_loss': 0.0004403147, 'torso_weights_entropy_loss': 0.0113202484, 'torso_deform_loss': 0.0143452586, 'sr_torso_mse_loss': 0.0005878768}
+| Validation results@70000: {'total_loss': 0.0259369051, 'torso_mse_loss': 0.0004798749, 'torso_weights_entropy_loss': 0.010774345, 'torso_deform_loss': 0.0140342826, 'sr_torso_mse_loss': 0.0006484028}
+| Validation results@72000: {'total_loss': 0.0266398228, 'torso_mse_loss': 0.0005517406, 'torso_weights_entropy_loss': 0.0107415841, 'torso_deform_loss': 0.0146192551, 'sr_torso_mse_loss': 0.000727243}
+| Validation results@74000: {'total_loss': 0.0260450205, 'torso_mse_loss': 0.0004732334, 'torso_weights_entropy_loss': 0.0108664516, 'torso_deform_loss': 0.0140682522, 'sr_torso_mse_loss': 0.0006370833}
+| Validation results@76000: {'total_loss': 0.0268596816, 'torso_mse_loss': 0.0005668052, 'torso_weights_entropy_loss': 0.0109767595, 'torso_deform_loss': 0.0145783853, 'sr_torso_mse_loss': 0.0007377316}
+| Validation results@78000: {'total_loss': 0.0263571623, 'torso_mse_loss': 0.0005066613, 'torso_weights_entropy_loss': 0.0105861249, 'torso_deform_loss': 0.0145897559, 'sr_torso_mse_loss': 0.0006746202}
+| Validation results@80000: {'total_loss': 1.3043653452, 'torso_mse_loss': 0.000476466, 'torso_weights_entropy_loss': 0.0107385904, 'torso_deform_loss': 0.0141251708, 'sr_torso_mse_loss': 0.0006368508, 'torso_lpips_loss': 0.5502179289, 'sr_torso_lpips_loss': 0.7281703424}
+| Validation results@82000: {'total_loss': 1.1876906431, 'torso_mse_loss': 0.0004343588, 'torso_weights_entropy_loss': 0.0108248575, 'torso_deform_loss': 0.0141672967, 'sr_torso_mse_loss': 0.0005989356, 'torso_lpips_loss': 0.4974261531, 'sr_torso_lpips_loss': 0.6642390347}
+| Validation results@84000: {'total_loss': 1.1407556939, 'torso_mse_loss': 0.000494514, 'torso_weights_entropy_loss': 0.0110679406, 'torso_deform_loss': 0.0143364599, 'sr_torso_mse_loss': 0.0006594305, 'torso_lpips_loss': 0.4798663419, 'sr_torso_lpips_loss': 0.6343310028}
+| Validation results@86000: {'total_loss': 1.1336074334, 'torso_mse_loss': 0.0005161968, 'torso_weights_entropy_loss': 0.0108647606, 'torso_deform_loss': 0.0146088144, 'sr_torso_mse_loss': 0.0006968276, 'torso_lpips_loss': 0.475569002, 'sr_torso_lpips_loss': 0.6313518351}
+| Validation results@88000: {'total_loss': 1.1993771464, 'torso_mse_loss': 0.000637419, 'torso_weights_entropy_loss': 0.0110192956, 'torso_deform_loss': 0.0149148828, 'sr_torso_mse_loss': 0.0008243459, 'torso_lpips_loss': 0.5051025546, 'sr_torso_lpips_loss': 0.666878652}
+| Validation results@90000: {'total_loss': 1.1216288841, 'torso_mse_loss': 0.0004776583, 'torso_weights_entropy_loss': 0.0105933416, 'torso_deform_loss': 0.0140038935, 'sr_torso_mse_loss': 0.0006397224, 'torso_lpips_loss': 0.469951914, 'sr_torso_lpips_loss': 0.6259623489}
+| Validation results@92000: {'total_loss': 1.1025847113, 'torso_mse_loss': 0.0004422658, 'torso_weights_entropy_loss': 0.0108128482, 'torso_deform_loss': 0.0142309443, 'sr_torso_mse_loss': 0.0006001879, 'torso_lpips_loss': 0.4598017651, 'sr_torso_lpips_loss': 0.616696707}
+| Validation results@94000: {'total_loss': 1.092078594, 'torso_mse_loss': 0.0004784314, 'torso_weights_entropy_loss': 0.0109177811, 'torso_deform_loss': 0.0139519123, 'sr_torso_mse_loss': 0.0006354666, 'torso_lpips_loss': 0.459129712, 'sr_torso_lpips_loss': 0.6069652867}
+| Validation results@96000: {'total_loss': 1.1425856531, 'torso_mse_loss': 0.000519027, 'torso_weights_entropy_loss': 0.0109843912, 'torso_deform_loss': 0.0145514709, 'sr_torso_mse_loss': 0.0006905841, 'torso_lpips_loss': 0.4797763154, 'sr_torso_lpips_loss': 0.6360638639}
+| Validation results@98000: {'total_loss': 1.150962404, 'torso_mse_loss': 0.0005032573, 'torso_weights_entropy_loss': 0.0110442931, 'torso_deform_loss': 0.0144678999, 'sr_torso_mse_loss': 0.0006746031, 'torso_lpips_loss': 0.4839843905, 'sr_torso_lpips_loss': 0.6402879626}
+| Validation results@100000: {'total_loss': 1.0844215673, 'torso_mse_loss': 0.0004397546, 'torso_weights_entropy_loss': 0.0107705187, 'torso_deform_loss': 0.0142074612, 'sr_torso_mse_loss': 0.0006001437, 'torso_lpips_loss': 0.4531510279, 'sr_torso_lpips_loss': 0.6052526593}
+| Training end..
+Epoch 0 ended. Steps: 100001. {'total_loss': 0.0007428819904661706, 'torso_mse_loss': 0.0003051216514312215, 'torso_weights_entropy_loss': 0.022441238029423594, 'torso_deform_loss': 0.02090196131424916, 'sr_torso_mse_loss': 0.00042675218504870246, 'image_psnr': 36.43304708099579, 'density_grid_info_min_density_torso': 0.001849466830136862, 'density_grid_info_max_density_torso': 0.99968994140625, 'density_grid_info_mean_density_torso': 0.3603093055188656, 'density_grid_info_occupancy_rate_torso': 0.003094883918762207, 'density_grid_info_step_mean_count_torso': 0.0, 'torso_lpips_loss': 0.36534681734004787, 'sr_torso_lpips_loss': 0.5110029293029859}
