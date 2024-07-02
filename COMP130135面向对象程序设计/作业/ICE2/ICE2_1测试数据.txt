@@ -1,0 +1,27 @@
+第一组
+
+Shanghai 20
+Guangzhou 28
+Beijing 21
+Hangzhou 21
+Chengdu 19
+Urumqi 12
+Kunming 21
+Xiamen 25
+Lhasa 15
+Harbin 10
+Sanya 28
+
+第二组
+
+Shanghai 20
+Guangzhou 26
+Beijing 21
+Hangzhou 21
+Chengdu 19
+Urumqi 12
+Kunming 21
+Xiamen 25
+Lhasa 15
+Harbin 9
+Sanya 28
